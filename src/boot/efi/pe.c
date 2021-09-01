@@ -18,6 +18,8 @@
         #define TARGET_MACHINE_TYPE EFI_IMAGE_MACHINE_AARCH64
 #elif defined(__arm__)
         #define TARGET_MACHINE_TYPE EFI_IMAGE_MACHINE_ARMTHUMB_MIXED
+#elif defined(__loongarch64)
+        #define TARGET_MACHINE_TYPE EFI_IMAGE_MACHINE_LOONGARCH64
 #elif defined(__riscv) && __riscv_xlen == 64
         #define TARGET_MACHINE_TYPE EFI_IMAGE_MACHINE_RISCV64
 #else

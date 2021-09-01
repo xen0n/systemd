@@ -244,8 +244,8 @@ if have_gnu_efi
                        '--build-id=sha1',
                        '-L', efi_libdir,
                        efi_crt0]
-        if ['aarch64', 'arm', 'riscv64'].contains(efi_arch)
-                # Aarch64, ARM32 and 64bit RISC-V don't have an EFI capable objcopy.
+        if ['aarch64', 'arm', 'loongarch64', 'riscv64'].contains(efi_arch)
+                # These architectures don't have an EFI capable objcopy.
                 # Use 'binary' instead, and add required symbols manually.
                 efi_ldflags += ['--defsym=EFI_SUBSYSTEM=0xa']
                 efi_format = ['-O', 'binary']
