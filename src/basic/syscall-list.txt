@@ -203,6 +203,7 @@ madvise
 mbind
 membarrier
 memfd_create
+memfd_secret
 memory_ordering
 migrate_pages
 mincore
@@ -404,7 +405,7 @@ pwritev
 pwritev2
 query_module
 quotactl
-quotactl_path
+quotactl_fd
 read
 readahead
 readdir
